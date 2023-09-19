@@ -1,0 +1,151 @@
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	font-size: 20px;
+	 font-family: 'Oswald', sans-serif;
+	color: white;
+}
+
+/* Styling the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+	display: flex;
+	height: 50px;
+}
+.logo img {
+	height: 50px;
+	width: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+	
+}
+
+.nav-links  li {
+    margin-right: 20px;
+	font-weight: bold;
+}
+.nav-links ul li {
+	list-style: none;
+	margin: 50px 20px;
+}
+.nav-links ul li::after {
+    content: '';
+	height: 3px;
+	width: 0;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+	justify-content: space-between;
+}
+.nav-links ul li:hover::after {
+	width: 100%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+	font-style: bold;
+}
+.nav-links a:hover {
+	color: #279EFF;
+}
+/* Styling the burger menu for small screens */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.25),#000000),url("gambar/logos.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 50px;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: auto;
+  padding-top: 100px;
+}
+.hero p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-style: italic;
+}
+.hero a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* CSS untuk efek hover pada tombol button */
+button {
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	text-align: center;
+	font-weight: bold;
+	border: 2px solid #279EFF;
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+	color: white;
+}
+
+.icon-medsos {
+	padding-top: 50px;
+}
+
+/* about style */
+#about {
+	font-size: 50px;
+}
